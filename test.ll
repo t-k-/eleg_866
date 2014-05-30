@@ -25,7 +25,7 @@ entry:
   store i32 12, i32* %d, align 4
   %0 = load i32* %a, align 4
   %1 = load i32* %b, align 4
-  %add = add nsw i32 %0, %1
+  %add = add nsw i32 20, 14 
   store i32 %add, i32* %e, align 4
   %2 = load i32* %e, align 4
   %3 = load i32* %c, align 4
@@ -33,7 +33,7 @@ entry:
   store i32 %add1, i32* %e, align 4
   %4 = load i32* %e, align 4
   %5 = load i32* %d, align 4
-  %add2 = add nsw i32 %4, %5
+  %add2 = add nsw i32 5, 20
   store i32 %add2, i32* %e, align 4
   %6 = load i32* %e, align 4
   %call = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([6 x i8]* @.str, i32 0, i32 0), i32 %6)
